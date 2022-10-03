@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@800&display=swap');
+
+
+/* All Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    color: white;
+}
+
+/* --------------------------Common Properties--------------------------------- */
+/* NavBar */
+nav{
+    background-color: black;
+    display: flex;
+    padding: 13px 20px;
+    justify-content: space-between;
+    width: 100%;
+    /* position: fixed;
+    top: 0; */
+}
+nav img{
+    width: 160px;
+    margin-left: 9vw;
+}
+nav img:hover{
+    cursor: pointer;
+}
+nav ul{
+    display: flex;
+    color: white;
+    list-style: none;
+    margin-right: 10%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+}
+nav ul li{
+    margin: 12px 20px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    
+}
+.tab a:hover{
+    cursor: pointer;
+    color: rgb(66, 209, 66);
+}
+.non-tab:hover{
+    cursor: default;
+}
+.fa{
+    display: none;
+}
+
+/* Footer */
+footer{
+    background-color: black;
+    color: white;
+    width: 100%;
+    display: flex;
+    padding: 45px 10px;
+    align-items: center;
+    height: 10vh;
+    overflow: hidden;
+}
+footer img{
+    width: 12vw;
+}
+footer p{
+    display: inline-block;
+    padding: 10vw;
+    font-size: medium;
+}
+
+body{
+    position: relative;
+    z-index: -3;
+    /* background-color: black; */
+}
+/* Background */
+.bgvid{
+    position: relative;
+    background-color: black;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -2;
+}
+#back-vid{
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.8s ease-in;
+}
+
+
+/* Song Container */
+.music-player{
+    width: 100%;
+    height: 100%;
+    /* padding: 20px 50px; */
+    /* background-color: skyblue; */
+}
+.music-player h1{
+    text-align: center;
+    font-family: 'Lora', serif;
+    font-size: 3rem;
+    margin: 20px 0px;
+    text-shadow: 5px 5px 3px black;
+}
+.song-list ul{
+    list-style: none;
+    font-family: 'Roboto', sans-serif;
+    padding: 10px 30px;
+    height: 100%;
+}
+.song-list ul li{
+    font-size: 1.3rem;
+    padding: 18px 24px;
+    word-spacing: 2px;
+    margin: 6px
+}
+.song-list ul li:hover{
+    border: 1px solid white;
+    cursor: pointer;
+    background-color: rgb(44, 44, 44);
+    /* opacity: 0.4; */
+}
+.song-list{
+    /* background-color: rgb(65, 55, 55); */
+    height: 53vh;
+    overflow-y: scroll;
+}
+
+
+
+/* Controller */
+.controller{
+    /* background-color: black; */
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+#progressBar{
+    width: 90%;
+    margin: auto;
+    cursor: pointer;
+    
+}
+.control{
+    display: flex;
+}
+#current-song-name{
+    margin-top: 25px;
+    margin-left: 62px;
+    position: absolute;
+}
+
+
+/* Icons */
+.icons{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    filter: invert(100%);
+}
+#prev{
+    width: 30px;
+    cursor: pointer;
+}
+#play{
+    margin: 10px 45px;
+    width: 70px;
+    cursor: pointer;
+}
+#pause{
+    margin: 10px 45px;
+    width: 49px;
+    display: none;
+    cursor: pointer;
+}
+#next{
+    width: 30px;
+    cursor: pointer;
+    margin-right: 47px;
+}
+#repeat{
+    width: 27px;
+    cursor: pointer;
+}
+#repeat-1{
+    width: 36px;
+    display: none;
+    cursor: pointer;
+}
+
+/* Responsiveness */
+@media (max-width: 1020px) and (min-width: 401px){
+    #current-song-name{
+        margin-top: -56px;
+        text-align: center;
+        width: 100%;
+        margin-left: 0px;
+    }
+}
+@media (max-width: 400px){
+    #current-song-name{
+        margin-top: -80px;
+        margin-left: 0px;
+        text-align: center;
+        width: 100%;
+
+    }
+}
+
+
+
+

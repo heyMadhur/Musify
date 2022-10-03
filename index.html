@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/indexStyle.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="shortcut icon" href="images/spotify.png" type="image/x-icon">
+
+
+    <title>Spotify:Home</title>
+</head>
+
+
+<body>
+
+    <!-- NavBar -->
+    <nav id="nav">
+        <div>
+            <img src="images/logo.png" alt="Spotify" id="logo">
+        </div>
+        <ul id="menu">
+            <li class="tab"><a href="https://www.spotify.com/in-en/premium/">Premium</a></li>
+            <li class="tab"><a
+                    href="https://support.spotify.com/in-en/?_gl=1*dpehvs*_gcl_aw*R0NMLjE2NjI4MzAxMzQuRUFJYUlRb2JDaE1JOU9DSDByMkgtZ0lWbzVobUFoMGxFQXNnRUFBWUFTQUFFZ0k2a1BEX0J3RQ..*_gcl_dc*R0NMLjE2NjI4MzAxMzQuRUFJYUlRb2JDaE1JOU9DSDByMkgtZ0lWbzVobUFoMGxFQXNnRUFBWUFTQUFFZ0k2a1BEX0J3RQ..">Support</a>
+            </li>
+            <li class="tab"><a href="https://www.spotify.com/in-en/download/windows/">Download</a></li>
+            <li class="non-tab">|</li>
+            <li class="tab"><a href="https://www.spotify.com/in-en/signup">Sign up</a></li>
+            <li class="tab"><a
+                    href="https://accounts.spotify.com/en/login?continue=https%3A%2F%2Fopen.spotify.com%2F__noul__%3Fl2l%3D1%26nd%3D1&_locale=en-IN">Log
+                    in</a></li>
+        </ul>
+        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </nav>
+
+    <!-- Section-A -->
+    <section class="sec-a">
+        <!-- Background Video -->
+        <video src="video/bgv1.mp4" loop autoplay muted class="back-vid"></video>
+
+        <div class="container">
+            <img src="images/phone1.png" alt="Spotify">
+            <h2>Listen To your Favourite Play List❤❤ Now....</h2>
+            <a href="html/playSongs.html">Listen Now!!!</a>
+        </div>
+    </section>
+
+    <!-- Section-B -->
+    <section class="sec-b">
+        <h1>Why Spotify?</h1>
+        <ul>
+            <li>
+                <img src="images/a1.png" alt="">
+                <h3>Play your favorites.</h3>
+                <p>Listen to the songs you love, and discover new music and podcasts.</p>
+            </li>
+            <li>
+                <img src="images/a2.png" alt="">
+                <h3>Playlists made easy.</h3>
+                <p>We'll help you make playlists. Or enjoy playlists made by music experts.</p>
+            </li>
+            <li>
+                <img src="images/a3.png" alt="">
+                <h3>Make it yours.</h3>
+                <p>Tell us what you like, and we'll recommend music for you.</p>
+            </li>
+            <li>
+                <img src="images/a4.png" alt="">
+                <h3>Save mobile data.</h3>
+                <p>To use less data when you play music, turn on Data Saver in Settings.</p>
+            </li>
+        </ul>
+    </section>
+
+    <footer>
+        <img src="images/logo.png" alt="Spotify">
+        <p>All the content and songs are regulated by Spotify &copy;</p>
+    </footer>
+
+
+<script src="js/script.js"></script>
+</body>
+
+</html>

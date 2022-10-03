@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/playSongsStyle.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="shortcut icon" href="../images/spotify.png" type="image/x-icon">
+
+    <title>Music Player</title>
+</head>
+
+<body>
+    <nav id="nav">
+        <div>
+            <img src="../images/logo.png" alt="Spotify" id="logo">
+        </div>
+        <ul id="menu">
+            <li class="tab"><a href="https://www.spotify.com/in-en/premium/">Premium</a></li>
+            <li class="tab"><a
+                    href="https://support.spotify.com/in-en/?_gl=1*dpehvs*_gcl_aw*R0NMLjE2NjI4MzAxMzQuRUFJYUlRb2JDaE1JOU9DSDByMkgtZ0lWbzVobUFoMGxFQXNnRUFBWUFTQUFFZ0k2a1BEX0J3RQ..*_gcl_dc*R0NMLjE2NjI4MzAxMzQuRUFJYUlRb2JDaE1JOU9DSDByMkgtZ0lWbzVobUFoMGxFQXNnRUFBWUFTQUFFZ0k2a1BEX0J3RQ..">Support</a>
+            </li>
+            <li class="tab"><a href="https://www.spotify.com/in-en/download/windows/">Download</a></li>
+            <li class="non-tab">|</li>
+            <li class="tab"><a href="https://www.spotify.com/in-en/signup">Sign up</a></li>
+            <li class="tab"><a
+                    href="https://accounts.spotify.com/en/login?continue=https%3A%2F%2Fopen.spotify.com%2F__noul__%3Fl2l%3D1%26nd%3D1&_locale=en-IN">Log
+                    in</a></li>
+        </ul>
+        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </nav>
+
+
+    <div class="bgvid">
+        <!-- Background Video -->
+        <video src="../video/bgv1.mp4" loop autoplay muted id="back-vid"></video>
+
+        <div class="music-player">
+            <h1>My Favs❤❤</h1>
+            <div class="song-list">
+                <ul>
+                    <li class="song-name-li">
+                        <img src="" alt="">
+                    </li>
+                    <li class="song-name-li">
+                        <img src="" alt="">
+                    </li>
+                    <li class="song-name-li">
+                        <img src="" alt="">
+                    </li>
+                    <li class="song-name-li">
+                        <img src="" alt="">
+                    </li>
+                    <li class="song-name-li">
+                        <img src="" alt="">
+                    </li>
+                    <li class="song-name-li">
+                        <img src="" alt="">
+                    </li>
+                    <li class="song-name-li">
+                        <img src="" alt="">
+                    </li>
+                    <li class="song-name-li">
+                        <img src="" alt="">
+                    </li>
+                    <li class="song-name-li">
+                        <img src="" alt="">
+                    </li>
+                    <li class="song-name-li">
+                        <img src="" alt="">
+                    </li>
+                    <li class="song-name-li">
+                        <img src="" alt="">
+                    </li>
+                    <li class="song-name-li">
+                        <img src="" alt="">
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Controller -->
+            <div class="controller">
+                <!-- Seek Bar -->
+                <input type="range" name="progressBar" id="progressBar" value="0" maxlength="100">
+
+                <!-- Play-Pause Controller -->
+                <div class="control">
+                    <div >
+                        <h2 id="current-song-name"></h2>
+                    </div>
+
+                    <!-- All Icons -->
+                    <div class="icons">
+                        <!-- Previous -->
+                        <svg id="prev" onclick="masterprev()" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M267.5 440.6c9.5 7.9 22.8 9.7 34.1 4.4s18.4-16.6 18.4-29V96c0-12.4-7.2-23.7-18.4-29s-24.5-3.6-34.1 4.4l-192 160L64 241V96c0-17.7-14.3-32-32-32S0 78.3 0 96V416c0 17.7 14.3 32 32 32s32-14.3 32-32V271l11.5 9.6 192 160z"/></svg>
+
+                        <!-- Play -->
+                        <svg id="play" onclick="masterplay()" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M512 256c0 141.4-114.6 256-256 256S0 397.4 0 256S114.6 0 256 0S512 114.6 512 256zM188.3 147.1c-7.6 4.2-12.3 12.3-12.3 20.9V344c0 8.7 4.7 16.7 12.3 20.9s16.8 4.1 24.3-.5l144-88c7.1-4.4 11.5-12.1 11.5-20.5s-4.4-16.1-11.5-20.5l-144-88c-7.4-4.5-16.7-4.7-24.3-.5z"/></svg>
+            
+                        <!-- Pause -->
+                        <svg id="pause" onclick="masterpause()" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M48 64C21.5 64 0 85.5 0 112V400c0 26.5 21.5 48 48 48H80c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48H48zm192 0c-26.5 0-48 21.5-48 48V400c0 26.5 21.5 48 48 48h32c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48H240z"/></svg>
+                        
+                        <!-- Next -->
+                        <svg id="next" onclick="masternext(1)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M52.5 440.6c-9.5 7.9-22.8 9.7-34.1 4.4S0 428.4 0 416V96C0 83.6 7.2 72.3 18.4 67s24.5-3.6 34.1 4.4l192 160L256 241V96c0-17.7 14.3-32 32-32s32 14.3 32 32V416c0 17.7-14.3 32-32 32s-32-14.3-32-32V271l-11.5 9.6-192 160z"/></svg>
+
+                        <!-- Repeat -->
+                        <svg id="repeat" onclick="masterrepeat()" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M0 224c0 17.7 14.3 32 32 32s32-14.3 32-32c0-53 43-96 96-96H320v32c0 12.9 7.8 24.6 19.8 29.6s25.7 2.2 34.9-6.9l64-64c12.5-12.5 12.5-32.8 0-45.3l-64-64c-9.2-9.2-22.9-11.9-34.9-6.9S320 19.1 320 32V64H160C71.6 64 0 135.6 0 224zm512 64c0-17.7-14.3-32-32-32s-32 14.3-32 32c0 53-43 96-96 96H192V352c0-12.9-7.8-24.6-19.8-29.6s-25.7-2.2-34.9 6.9l-64 64c-12.5 12.5-12.5 32.8 0 45.3l64 64c9.2 9.2 22.9 11.9 34.9 6.9s19.8-16.6 19.8-29.6V448H352c88.4 0 160-71.6 160-160z"/></svg>
+                        
+                        <!-- Repeat-1 -->
+                        <svg id="repeat-1" onclick="masterrepeat1()" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg"><path d="M24,128A72.1,72.1,0,0,1,96,56h96V40a8,8,0,0,1,4.9-7.4,8.4,8.4,0,0,1,8.8,1.7l24,24a8.1,8.1,0,0,1,0,11.4l-24,24A8.3,8.3,0,0,1,200,96a8.5,8.5,0,0,1-3.1-.6A8,8,0,0,1,192,88V72H96a56,56,0,0,0-56,56,8,8,0,0,1-16,0Zm200-8a8,8,0,0,0-8,8,56,56,0,0,1-56,56H64V168a8,8,0,0,0-4.9-7.4,8.4,8.4,0,0,0-8.8,1.7l-24,24a8.1,8.1,0,0,0,0,11.4l24,24A8.3,8.3,0,0,0,56,224a8.5,8.5,0,0,0,3.1-.6A8,8,0,0,0,64,216V200h96a72.1,72.1,0,0,0,72-72A8,8,0,0,0,224,120Zm-92,40a8,8,0,0,0,8-8V104a7.9,7.9,0,0,0-3.8-6.8,8,8,0,0,0-7.8-.4l-16,8a8.2,8.2,0,0,0-3.6,10.8,8.1,8.1,0,0,0,10.8,3.5l4.4-2.2V152A8,8,0,0,0,132,160Z"/></svg>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+    <!-- <footer>
+        <img src="../images/logo.png" alt="Spotify">
+        <p>All the content and songs are regulated by Spotify &copy;</p>
+    </footer> -->
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

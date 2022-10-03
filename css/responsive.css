@@ -1,0 +1,146 @@
+/* Mobile/ Smartphone High Resolution */
+@media (max-width: 572px) {
+
+    /* NavBar */
+    nav {
+        position: relative;
+    }
+
+    nav ul {
+        display: none;
+        position: absolute;
+        right: -34px;
+        top: 64px;
+        text-align: right;
+    }
+
+    nav ul li {
+        font-size: 1.7rem;
+    }
+
+    .non-tab {
+        display: none;
+    }
+
+    #logo {
+        margin-left: 0px;
+        display: block;
+    }
+
+    .fa {
+        display: block;
+        color: white;
+        position: absolute;
+        right: 7vw;
+        top: 21px;
+        font-size: 2.3rem
+    }
+
+    /* Section-A */
+    .sec-a {
+        height: 425px;
+    }
+    .container{
+        width: 95%;
+    }
+    .container img {
+        display: none;
+    }
+    .container h2{
+        font-size: 3rem;
+        text-shadow: 3px 4px 1px black;
+    }
+
+
+    /* Section-B */
+    .sec-b h1{
+        font-size: 2.8rem;
+    }
+    .sec-b ul {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 0rem;
+    }
+    .sec-b ul li img{
+        width: 7rem;
+        margin-top: 40px;
+    }
+    .sec-b ul li h3{
+        margin-top: 0.5rem;
+    }
+    .sec-b ul li p {
+        width: 52.4vw;
+        margin-top: 0rem;
+    }
+
+
+
+}
+
+/* Tablets Ipads portrait mode */
+@media (min-width: 573px) and (max-width: 1024px) {
+
+    /* NavBar */
+    nav {
+        flex-direction: column;
+
+    }
+
+    nav img {
+        display: block;
+        margin: 0px auto;
+    }
+
+    nav ul {
+        justify-content: center;
+        margin: 12px 0px 0px 0px;
+    }
+
+    /* Section-A */
+    .sec-a {
+        height: 400px;
+    }
+
+    .container {
+        width: 100%;
+        padding: 0px 11%;
+    }
+
+    .container img {
+        display: none;
+    }
+
+    .container h2 {
+        font-size: 4rem;
+        text-shadow: 5px 4px 1px black;
+    }
+
+    .container a {
+        margin-top: 3.1rem;
+    }
+
+    /* Section-B */
+    .sec-b ul li img {
+        width: 5rem;
+    }
+}
+
+
+/* Desktops */
+@media (min-width: 1025px) and (max-width: 1280px) {
+
+    /* Section-A */
+    .container img {
+        width: 260px;
+        left: -56%;
+    }
+
+    .container h2 {
+        font-size: 4rem;
+    }
+
+    .container a {
+        margin-top: 3rem;
+        font-size: 20px;
+    }
+}
