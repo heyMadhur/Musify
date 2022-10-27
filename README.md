@@ -1,2 +1,3 @@
 # Musify
 It is the first working website made by me....
+Don't go to the list of songs. It just the songs I listened during the production of this website.
